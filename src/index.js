@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+// import HookApp from "./HookApp";
+// import CounterApp from "./components/useState/CounterApp";
+// import CounterWithCustomHook from "./components/useState/CounterWithCustomHook";
+// import SimpleForm from "./components/useEffect/SimpleForm";
+// import FormWithCustomHook from "./components/useEffect/FormWithCustomHook";
+// import MultipleCustomHooks from "./components/examples/MultipleCustomHooks";
+// import FocusScreen from "./components/useRef/FocusScreen";
+// import RealExampleRef from "./components/useRef/RealExampleRef";
+// import Layout from "./components/useLayoutEffect/LayoutEffect";
+// import Memorize from "./components/memo/Memorize";
+// import MemoHook from "./components/useMemo/MemoHook";
+// import CallbackHook from "./components/useCallback/CallbackHook";
+// import Padre from "./components/homeWork/Padre";
+// // import "./components/useReducer/introReducer";
+// import TodoApp from "./components/useReducer/TodoApp";
+import MainApp from "./components/useContext/MainApp";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import "bootstrap/dist/css/bootstrap.min.css";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<MainApp />, document.getElementById("root"));

@@ -2,7 +2,7 @@ import React from "react";
 import { Form, InputGroup, FormControl, Button } from "react-bootstrap";
 import { useForm } from "../../hooks/useForm";
 
-const TodoAdd = ({ handelAddTodo }) => {
+const TodoAdd = ({ handleAddTodo }) => {
   const [{ description }, handleInputChange, reset] = useForm({
     description: "",
   });
@@ -20,7 +20,7 @@ const TodoAdd = ({ handelAddTodo }) => {
       done: false,
     };
 
-    handelAddTodo(newTodo);
+    handleAddTodo(newTodo);
     reset();
   };
 

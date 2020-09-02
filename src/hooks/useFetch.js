@@ -23,6 +23,13 @@ export const useFetch = (url) => {
         if (isMounted.current) {
           setstate({ loading: false, error: null, data });
         }
+      })
+      .catch(() => {
+        setstate({
+          data: null,
+          loading: false,
+          error: "No se pudo cargar la información",
+        });
       });
   }, [url]);
 

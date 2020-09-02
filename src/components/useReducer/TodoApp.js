@@ -12,13 +12,11 @@ const init = () => {
 const TodoApp = () => {
   const [todos, dispatch] = useReducer(todoReducer, [], init);
 
-  console.log(todos);
-
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  const handelAddTodo = (newTodo) => {
+  const handleAddTodo = (newTodo) => {
     dispatch({
       type: "add",
       payload: newTodo,
@@ -55,7 +53,7 @@ const TodoApp = () => {
           />
         </Col>
         <Col xs={5}>
-          <TodoAdd handelAddTodo={handelAddTodo} />
+          <TodoAdd handleAddTodo={handleAddTodo} />
         </Col>
       </Row>
     </div>
